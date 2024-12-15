@@ -1,14 +1,45 @@
 "use client";
 
 import Image from "next/image";
-import React, { useEffect, useRef, useState } from "react";
-import { SealCheck } from "@phosphor-icons/react";
 import Link from "next/link";
+import React, { useEffect, useRef, useState } from "react";
+import {
+  Bell,
+  Calendar,
+  Layout,
+  Power,
+  SealCheck,
+} from "@phosphor-icons/react";
+import { usePathname } from "next/navigation";
+
+export const menus = [
+  {
+    title: "Dashboard",
+    url: "/",
+    IconBase: <Layout size={24} />,
+  },
+  {
+    title: "Notification",
+    url: "/",
+    IconBase: <Bell size={24} />,
+  },
+  {
+    title: "Schedules",
+    url: "/",
+    IconBase: <Calendar size={24} />,
+  },
+  {
+    title: "Log out",
+    url: "/",
+    IconBase: <Power size={24} />,
+  },
+];
 
 const NavigationBar = () => {
   const ref = useRef<HTMLDivElement>(null);
   const [scroll, setScroll] = useState(false);
   const [show, setShow] = useState(false);
+  const pathName = usePathname();
 
   // function toggle menu
   const toggleMenu = () => {
@@ -45,7 +76,8 @@ const NavigationBar = () => {
   return (
     <>
       <div
-        className={`${scroll && "bg-foreground"} navigation-bar-container fixed left-0 top-0 z-50 w-full border-b border-bordered px-4 py-5 drop-shadow-xl transition-all`}
+        ref={ref}
+        className={`${scroll && "bg-foreground"} ${pathName.includes("auth") && "hidden"} navigation-bar-container fixed left-0 top-0 z-50 w-full border-b border-bordered px-4 py-5 drop-shadow-xl transition-all`}
       >
         <div className="navigation-bar mx-auto flex h-fit w-full max-w-5xl items-center justify-between">
           <div className="brand-logo">
@@ -59,7 +91,7 @@ const NavigationBar = () => {
               />
             </Link>
           </div>
-          <div ref={ref} className="relative">
+          <div className="">
             <button
               onClick={() => toggleMenu()}
               className={`card-profile flex w-fit items-center gap-4 rounded-soorfinc border border-bordered ${show ? "bg-background" : "bg-foreground"} px-4 py-2`}
@@ -72,7 +104,7 @@ const NavigationBar = () => {
                 className="h-10 w-10 rounded-full object-cover"
               />
               <div className="flex items-center gap-2">
-                <div className="profile-name w-32">
+                <div className="profile-name w-28">
                   <p className="w-32 truncate text-start text-base font-bold">
                     Yorisofficial
                   </p>
@@ -83,16 +115,25 @@ const NavigationBar = () => {
               </div>
             </button>
             {show && (
-              <div className="absolute right-0 top-full translate-y-2 rounded-soorfinc border border-bordered bg-foreground p-4 drop-shadow-xl">
-                <p className="text-justify">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Consectetur a magni laboriosam vitae nisi cumque enim, omnis
-                  porro odit placeat dolore, optio sapiente illo dignissimos ad
-                  vero ab in possimus. Quod, delectus. Lorem ipsum dolor sit
-                  amet consectetur adipisicing elit. Debitis, qui dolore. Minima
-                  minus distinctio, alias impedit necessitatibus deleniti.
-                  Eveniet, vel?
-                </p>
+              <div className="absolute left-0 top-full w-full translate-y-4 px-4">
+                <div className="card-profile flex w-full flex-col items-center gap-4 rounded-soorfinc border border-bordered/10 bg-foreground p-4 drop-shadow-xl">
+                  <div className="w-full border-b border-bordered pb-4">
+                    <h1 className="text-start text-2xl font-semibold">Menus</h1>
+                  </div>
+                  <ul className="flex w-full flex-col items-center gap-2">
+                    {menus.map((item, index) => (
+                      <li key={index} className="flex w-full">
+                        <Link
+                          href={item.url}
+                          className="rounded-inner flex w-full gap-4 border border-bordered p-4 duration-300 hover:bg-background"
+                        >
+                          {item.IconBase}
+                          {item.title}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             )}
           </div>

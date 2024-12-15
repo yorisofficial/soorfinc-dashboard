@@ -20,7 +20,8 @@ const config: Config = {
     },
     borderRadius: {
       full: "9999px",
-      soorfinc: "10px",
+      inner: "6px",
+      soorfinc: "12px",
     },
   },
   plugins: [],
