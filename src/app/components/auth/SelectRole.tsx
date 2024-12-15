@@ -16,16 +16,16 @@ export const dataRole = [
     iconBase: (
       <User size={24} className="text-brand group-hover:text-primary" />
     ),
-    iconActive: <User size={24} className="text-primary" />,
-    roleId: "GhvHOS3AdR0U7CxI324GXWl!6lB&2hV@T5fCbNG)",
+    iconActive: <User size={24} className="" />,
+    roleId: "customer",
   },
   {
     title: "partner",
     iconBase: (
       <UsersThree size={24} className="text-brand group-hover:text-primary" />
     ),
-    iconActive: <UsersThree size={24} className="text-primary" />,
-    roleId: "v&KDohBQUTthOZ#NleV1tpOLQXQZKzeqkIS72gX5",
+    iconActive: <UsersThree size={24} className="" />,
+    roleId: "partner",
   },
 ];
 
@@ -47,7 +47,13 @@ const SelectRole = () => {
     if (role) {
       setDisable(false);
     }
-    router.push(`/auth/login/${role}`);
+    if (role === "customer") {
+      router.push(`https://soorfinc.vercel.app/en/user-auth/signin`);
+    } else if (role === "partner") {
+      router.push(`/auth/signin/${role}`);
+    } else {
+      setDisable(true);
+    }
   };
 
   return (
@@ -57,12 +63,12 @@ const SelectRole = () => {
           <div key={item.roleId} className="">
             <button
               onClick={() => setRole(item.roleId)}
-              className={`group flex w-full items-center justify-between gap-4 rounded-soorfinc border border-brand bg-primary p-4 text-start text-base font-semibold text-brand outline-none duration-300 hover:bg-brand hover:text-primary ${item.roleId === role ? "bg-brand text-primary" : ""}`}
+              className={`flex w-full items-center gap-4 rounded-soorfinc border border-brand p-4 ${role === item.roleId ? "bg-brand text-primary" : ""}`}
             >
               {role === item.roleId ? item.iconActive : item.iconBase}
               <span className="w-full text-start">Login as {item.title}</span>
-              {item.roleId === role ? (
-                <CheckCircle size={32} weight="fill" className="text-primary" />
+              {role === item.roleId ? (
+                <CheckCircle size={32} weight="fill" className="" />
               ) : (
                 <Circle
                   size={32}
