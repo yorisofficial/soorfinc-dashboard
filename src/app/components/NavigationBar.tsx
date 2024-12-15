@@ -6,6 +6,7 @@ import React, { useEffect, useRef, useState } from "react";
 import {
   Bell,
   Calendar,
+  Headset,
   Layout,
   Power,
   SealCheck,
@@ -27,6 +28,11 @@ export const menus = [
     title: "Schedules",
     url: "/",
     IconBase: <Calendar size={24} />,
+  },
+  {
+    title: "Support",
+    url: "https://soorfinc.vercel.app/en/support",
+    IconBase: <Headset size={24} />,
   },
   {
     title: "Log out",
