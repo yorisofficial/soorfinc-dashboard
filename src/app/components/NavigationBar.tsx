@@ -15,7 +15,7 @@ import { usePathname } from "next/navigation";
 export const menus = [
   {
     title: "Dashboard",
-    url: "/",
+    url: "/dashboard/yorisofficial",
     IconBase: <Layout size={24} />,
   },
   {
@@ -77,7 +77,7 @@ const NavigationBar = () => {
     <>
       <div
         ref={ref}
-        className={`${scroll && "bg-foreground"} ${pathName.includes("auth") && "hidden"} navigation-bar-container fixed left-0 top-0 z-50 w-full border-b border-bordered px-4 py-5 drop-shadow-xl transition-all`}
+        className={`${scroll && "bg-foreground"} ${pathName.includes("auth") && "hidden"} navigation-bar-container fixed left-0 top-0 z-40 w-full border-b border-bordered px-4 py-5 drop-shadow-xl transition-all`}
       >
         <div className="navigation-bar mx-auto flex h-fit w-full max-w-5xl items-center justify-between">
           <div className="brand-logo">
@@ -114,7 +114,7 @@ const NavigationBar = () => {
                 </div>
               </div>
             </button>
-            {!show && (
+            {show && (
               <div className="absolute left-0 top-full w-full translate-y-4 px-4 xl:left-auto xl:right-0 xl:w-[400px] xl:px-0">
                 <div className="card-profile flex w-full flex-col items-center gap-4 rounded-soorfinc border border-bordered/10 bg-foreground p-4 drop-shadow-xl">
                   <div className="w-full border-b border-bordered pb-4">

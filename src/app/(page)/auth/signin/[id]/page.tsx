@@ -5,8 +5,8 @@ import React, { useState } from "react";
 
 const AuthLogin = ({ params }: { params: { id: string } }) => {
   return (
-    <div className="relative min-h-screen w-full overflow-hidden bg-brand text-primary">
-      <div className="top-nav fixed z-50 w-full p-4">
+    <div className="relative min-h-screen w-full overflow-hidden bg-brand px-4 text-primary xl:px-0">
+      <div className="top-nav fixed z-50 w-full py-4">
         <Image
           src="/Brand/soorfinc-logo-white.svg"
           alt="soorfinc-logo"
@@ -26,7 +26,7 @@ const AuthLogin = ({ params }: { params: { id: string } }) => {
           className="h-fit w-full object-contain"
         />
       </div>
-      <div className="content-signin flex h-screen w-full items-center justify-center">
+      <div className="content-signin my-8 flex h-screen w-full items-center justify-center xl:my-0">
         <div className="relative z-10 flex w-[400px] flex-col items-center justify-center gap-4 rounded-soorfinc bg-[#ffffff] p-8 text-background xl:w-[500px]">
           <div className="logo-brand">
             <Image

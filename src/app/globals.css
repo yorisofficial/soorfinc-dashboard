@@ -8,5 +8,56 @@ body {
 }
 
 .bored {
-  @apply outline-red outline;
+  @apply outline outline-red;
+}
+
+/* Custom Scrollbar untuk Chrome, Safari, dan Edge */
+::-webkit-scrollbar {
+  width: 12px; /* Lebar scrollbar */
+  height: 12px; /* Tinggi scrollbar (untuk scrollbar horizontal) */
+}
+
+::-webkit-scrollbar-track {
+  background-color: #6b6b6b; /* Warna latar belakang track scrollbar */
+  border-radius: 4px; /* Membuat track dengan sudut yang melengkung */
+  padding: 8px; /* Menambahkan padding agar thumb tidak terlalu dekat dengan track */
+}
+
+::-webkit-scrollbar-thumb {
+  width: 50%;
+  background-color: #111827; /* Warna bagian yang digeser */
+  border-radius: 4px; /* Membuat bagian geser dengan sudut melengkung */
+  border: 1px solid #3f3f3f; /* Memberikan border pada thumb untuk kontras lebih baik */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #111827; /* Warna thumb saat hover */
+}
+
+/* Custom Scrollbar untuk Firefox */
+scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+/* Untuk IE dan Edge versi lama */
+::-ms-scrollbar {
+  width: 12px;
+}
+
+::-ms-scrollbar-track {
+  background-color: #f1f1f1;
+  border-radius: 10px;
+}
+
+::-ms-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 10px;
+}
+
+/* Mengatur tampilan scrollbar pada elemen tertentu */
+.container {
+  width: 100%;
+  height: 200px;
+  overflow-y: scroll; /* Scroll vertikal */
 }

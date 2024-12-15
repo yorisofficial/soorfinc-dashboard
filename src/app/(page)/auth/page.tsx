@@ -1,5 +1,6 @@
 "use client";
 
+import WaveTexture from "@/app/components/acc/WaveTexture";
 import SelectRole from "@/app/components/auth/SelectRole";
 import Image from "next/image";
 import React from "react";
@@ -7,7 +8,7 @@ import React from "react";
 const AuthPage = () => {
   return (
     <div className="relative flex min-h-screen w-full items-center justify-center bg-brand">
-      <div className="flex flex-col items-center justify-center gap-4 rounded-soorfinc bg-primary p-8 text-background">
+      <div className="relative z-10 flex flex-col items-center justify-center gap-4 rounded-soorfinc bg-primary p-8 text-background drop-shadow-xl xl:w-[500px]">
         <div className="logo-brand">
           <Image
             src={"/Brand/soorfinc-logo.svg"}
@@ -27,6 +28,7 @@ const AuthPage = () => {
         </div>
         <SelectRole />
       </div>
+      <WaveTexture />
     </div>
   );
 };

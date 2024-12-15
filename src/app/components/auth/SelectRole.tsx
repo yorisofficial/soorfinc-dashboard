@@ -14,17 +14,17 @@ export const dataRole = [
   {
     title: "customer",
     iconBase: (
-      <User size={24} className="text-brand group-hover:text-primary" />
+      <User size={32} className="text-brand group-hover:text-primary" />
     ),
-    iconActive: <User size={24} className="" />,
+    iconActive: <User size={32} weight="fill" className="" />,
     roleId: "customer",
   },
   {
     title: "partner",
     iconBase: (
-      <UsersThree size={24} className="text-brand group-hover:text-primary" />
+      <UsersThree size={32} className="text-brand group-hover:text-primary" />
     ),
-    iconActive: <UsersThree size={24} className="" />,
+    iconActive: <UsersThree weight="fill" size={32} className="" />,
     roleId: "partner",
   },
 ];

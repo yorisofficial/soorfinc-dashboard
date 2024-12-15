@@ -29,7 +29,8 @@ const FormLoginPartner = () => {
   const handleSubmitForm = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (email && password) {
-      router.push(`/auth/success/${random}`);
+      // router.push(`/auth/success/${random}`);
+      router.push(`/dashboard/yorisofficial`);
     }
   };
 
@@ -120,6 +121,25 @@ const FormLoginPartner = () => {
           <GoogleLogo size={24} weight="bold" />
           Login with Google
         </Link>
+      </div>
+      <div className="mt-4 flex flex-col gap-2 text-center">
+        <Link
+          href={"/"}
+          aria-label="forget password"
+          className="text-center text-sm"
+        >
+          Forget password
+        </Link>
+        <span className="text-sm">
+          Dont have an account?{" "}
+          <Link
+            href={"/"}
+            aria-label="forget password"
+            className="text-center font-bold text-brand underline underline-offset-4"
+          >
+            Signup
+          </Link>
+        </span>
       </div>
     </div>
   );
