@@ -6,7 +6,7 @@ import React, { useState } from "react";
 const AuthLogin = ({ params }: { params: { id: string } }) => {
   return (
     <div className="relative min-h-screen w-full overflow-hidden bg-brand px-4 text-primary xl:px-0">
-      <div className="top-nav fixed z-50 w-full py-4">
+      <div className="top-nav fixed z-50 w-full py-4 xl:p-4">
         <Image
           src="/Brand/soorfinc-logo-white.svg"
           alt="soorfinc-logo"
