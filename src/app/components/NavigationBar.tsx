@@ -91,7 +91,7 @@ const NavigationBar = () => {
               />
             </Link>
           </div>
-          <div className="">
+          <div className="xl:relative">
             <button
               onClick={() => toggleMenu()}
               className={`card-profile flex w-fit items-center gap-4 rounded-soorfinc border border-bordered ${show ? "bg-background" : "bg-foreground"} px-4 py-2`}
@@ -114,8 +114,8 @@ const NavigationBar = () => {
                 </div>
               </div>
             </button>
-            {show && (
-              <div className="absolute left-0 top-full w-full translate-y-4 px-4">
+            {!show && (
+              <div className="absolute left-0 top-full w-full translate-y-4 px-4 xl:left-auto xl:right-0 xl:w-[400px] xl:px-0">
                 <div className="card-profile flex w-full flex-col items-center gap-4 rounded-soorfinc border border-bordered/10 bg-foreground p-4 drop-shadow-xl">
                   <div className="w-full border-b border-bordered pb-4">
                     <h1 className="text-start text-2xl font-semibold">Menus</h1>
@@ -125,7 +125,7 @@ const NavigationBar = () => {
                       <li key={index} className="flex w-full">
                         <Link
                           href={item.url}
-                          className="rounded-inner flex w-full gap-4 border border-bordered p-4 duration-300 hover:bg-background"
+                          className="flex w-full gap-4 rounded-inner border border-bordered p-4 duration-300 hover:bg-background"
                         >
                           {item.IconBase}
                           {item.title}

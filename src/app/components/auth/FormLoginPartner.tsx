@@ -2,13 +2,21 @@
 
 import { Eye, EyeClosed, GoogleLogo, X } from "@phosphor-icons/react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
 
 const FormLoginPartner = () => {
+  const router = useRouter();
   const [email, setEmail] = useState("aaaaaaa@example.com");
   const [password, setPassword] = useState("1234aaaa");
   const [disable, setDisable] = useState(true);
   const [showPassword, setShowPassword] = useState(true);
+
+  // code random
+  const random = Array(32)
+    .fill("")
+    .map(() => String.fromCharCode(97 + Math.floor(Math.random() * 26)))
+    .join("");
 
   useEffect(() => {
     if (email && password) {
@@ -20,7 +28,9 @@ const FormLoginPartner = () => {
 
   const handleSubmitForm = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log(email, password);
+    if (email && password) {
+      router.push(`/auth/success/${random}`);
+    }
   };
 
   return (
@@ -44,7 +54,7 @@ const FormLoginPartner = () => {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             placeholder="Ex: examaple@example.com"
-            className="rounded-inner peer h-10 w-full border border-background p-2 outline outline-lightblack/10"
+            className="peer h-10 w-full rounded-inner border border-background p-2 outline outline-lightblack/10"
           />
           <p className="invisible text-xs text-red peer-invalid:visible">
             Please enter valid email format
@@ -70,7 +80,7 @@ const FormLoginPartner = () => {
             value={password}
             minLength={8}
             onChange={(e) => setPassword(e.target.value)}
-            className="rounded-inner peer h-10 w-full border border-background p-2 outline outline-lightblack/10"
+            className="peer h-10 w-full rounded-inner border border-background p-2 outline outline-lightblack/10"
           />
           <p className="invisible text-xs text-red peer-invalid:visible">
             Please enter valid password

@@ -1,8 +1,7 @@
 import FormLoginPartner from "@/app/components/auth/FormLoginPartner";
-import { Eye } from "@phosphor-icons/react/dist/ssr";
+import FooterAuth from "@/app/components/FooterAuth";
 import Image from "next/image";
-import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 
 const AuthLogin = ({ params }: { params: { id: string } }) => {
   return (
@@ -27,7 +26,7 @@ const AuthLogin = ({ params }: { params: { id: string } }) => {
           className="h-fit w-full object-contain"
         />
       </div>
-      <div className="content-signin bored flex h-screen w-full items-center justify-center">
+      <div className="content-signin flex h-screen w-full items-center justify-center">
         <div className="relative z-10 flex w-[400px] flex-col items-center justify-center gap-4 rounded-soorfinc bg-[#ffffff] p-8 text-background xl:w-[500px]">
           <div className="logo-brand">
             <Image
@@ -46,42 +45,11 @@ const AuthLogin = ({ params }: { params: { id: string } }) => {
               Welcome back, Please enter your details
             </p>
           </div>
-
           <hr className="my-1 w-full" />
           <FormLoginPartner />
         </div>
       </div>
-      <div className="absolute bottom-4 left-1/2 z-0 flex -translate-x-1/2 items-center gap-4">
-        <ul className="flex w-full items-center gap-4">
-          <li className="w-full text-nowrap border-r pr-4">
-            <Link
-              target="_blank"
-              href="https://soorfinc.vercel.app/en/about"
-              className="text-xs font-light underline-offset-4 hover:underline"
-            >
-              About us
-            </Link>
-          </li>
-          <li className="w-full text-nowrap border-r pr-4">
-            <Link
-              target="_blank"
-              href="https://soorfinc.vercel.app/en/support"
-              className="text-xs font-light underline-offset-4 hover:underline"
-            >
-              Customer support
-            </Link>
-          </li>
-          <li className="w-full text-nowrap">
-            <Link
-              target="_blank"
-              href="https://soorfinc.vercel.app/en/regulation"
-              className="text-xs font-light underline-offset-4 hover:underline"
-            >
-              Term and regulations
-            </Link>
-          </li>
-        </ul>
-      </div>
+      <FooterAuth />
     </div>
   );
 };
