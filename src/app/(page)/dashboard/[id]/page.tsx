@@ -39,8 +39,8 @@ export const statistics = [
 
 const DashboardPage = () => {
   return (
-    <div className="mx-auto h-fit min-h-screen w-full max-w-5xl px-4 pb-8 xl:px-0">
-      <div className="main-page mt-[130px] flex min-h-screen w-full flex-col gap-8">
+    <div className="container-content">
+      <div className="main-page top-margin flex min-h-screen w-full flex-col gap-8">
         <div className="header-page w-full border-b border-bordered pb-4">
           <h1 className="text-2xl font-semibold">Dashboard</h1>
         </div>

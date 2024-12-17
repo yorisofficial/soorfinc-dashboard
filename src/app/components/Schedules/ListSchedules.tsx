@@ -13,12 +13,16 @@ const ListSchedules = ({ data }: { data: SchedulesProps[] }) => {
     <>
       <div className="list-schedules card-schedules relative h-fit rounded-soorfinc border border-bordered bg-foreground p-4 xl:p-8">
         <div className="header-page flex w-full items-center justify-between sm:flex-row">
-          <h1 className="text-2xl font-semibold">Your schedules</h1>
+          <h1 className="text-base font-semibold xl:text-2xl">
+            Your schedules
+          </h1>
           <Link
-            href={"/"}
-            className="flex items-center gap-2 underline underline-offset-4"
+            href={"/dashboard/yorisofficial/schedules"}
+            aria-label="details schedule"
+            className="flex items-center gap-2 rounded-inner bg-brand py-2 pl-4 pr-2 text-xs text-primary duration-300 hover:bg-brand/90 xl:text-sm"
           >
-            Detail schedules <ArrowUpRight size={16} />
+            Details schedules
+            <ArrowUpRight size={16} className="flex-shrink-0" />
           </Link>
         </div>
         <LineSpaceY />

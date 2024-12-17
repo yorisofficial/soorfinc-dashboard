@@ -20,13 +20,13 @@ export const menus = [
     IconBase: <Layout size={24} />,
   },
   {
-    title: "Notification",
-    url: "/",
+    title: "Notifications",
+    url: "/dashboard/yorisofficial/notifications",
     IconBase: <Bell size={24} />,
   },
   {
     title: "Schedules",
-    url: "/",
+    url: "/dashboard/yorisofficial/schedules",
     IconBase: <Calendar size={24} />,
   },
   {
@@ -97,7 +97,10 @@ const NavigationBar = () => {
               />
             </Link>
           </div>
-          <div className="xl:relative">
+          <div className="flex items-center justify-center gap-8 xl:relative">
+            <Link href={"/dashboard/yorisofficial/notifications"}>
+              <Bell size={24} />
+            </Link>
             <button
               onClick={() => toggleMenu()}
               className={`card-profile flex w-fit items-center gap-4 rounded-soorfinc border border-bordered ${show ? "bg-background" : "bg-foreground"} px-4 py-2`}
@@ -130,7 +133,8 @@ const NavigationBar = () => {
                     {menus.map((item, index) => (
                       <li key={index} className="flex w-full">
                         <Link
-                          href={item.url}
+                          onClick={() => setShow(false)}
+                          href={`${item.url}`}
                           className="flex w-full gap-4 rounded-inner border border-bordered p-4 duration-300 hover:bg-background"
                         >
                           {item.IconBase}

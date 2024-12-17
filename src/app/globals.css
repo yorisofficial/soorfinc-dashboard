@@ -11,6 +11,14 @@ body {
   @apply outline outline-red;
 }
 
+/* setup global main page */
+.container-content {
+  @apply mx-auto h-fit min-h-screen w-full max-w-5xl px-4 pb-8 xl:px-0;
+}
+.top-margin {
+  @apply mt-[130px];
+}
+
 /* Custom Scrollbar untuk Chrome, Safari, dan Edge */
 ::-webkit-scrollbar {
   width: 12px; /* Lebar scrollbar */

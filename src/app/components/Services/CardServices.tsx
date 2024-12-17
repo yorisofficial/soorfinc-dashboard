@@ -10,12 +10,13 @@ const CardServices = ({ data }: { data: ServiceProps[] }) => {
     <>
       <div className="card-services h-fit max-h-[500px] w-full rounded-soorfinc border border-bordered bg-foreground p-4 xl:p-8">
         <div className="header-page flex w-full items-center justify-between sm:flex-row">
-          <h1 className="text-2xl font-semibold">Your services</h1>
+          <h1 className="text-base font-semibold xl:text-2xl">Your services</h1>
           <Link
             href={"/"}
-            className="flex items-center gap-2 underline underline-offset-4"
+            aria-label="add new service"
+            className="flex items-center gap-2 rounded-inner bg-brand py-2 pl-4 pr-2 text-xs text-primary duration-300 hover:bg-brand/90 xl:text-sm"
           >
-            Add new service <ArrowUpRight size={16} />
+            Add new service <ArrowUpRight size={16} className="flex-shrink-0" />
           </Link>
         </div>
         <LineSpaceY />
