@@ -112,7 +112,7 @@ const NavigationBar = () => {
               <div className="flex items-center gap-2">
                 <div className="profile-name w-28">
                   <p className="w-32 truncate text-start text-base font-bold">
-                    Yorisofficial
+                    Ade Yoga
                   </p>
                 </div>
                 <div className="status-verify">

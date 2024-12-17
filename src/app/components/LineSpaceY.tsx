@@ -5,7 +5,7 @@ import React from "react";
 const LineSpaceY = () => {
   return (
     <>
-      <hr className="my-6 text-bordered" />
+      <hr className="my-6 text-lightblack/20" />
     </>
   );
 };

@@ -6,7 +6,7 @@ import React from "react";
 const FooterAuth = () => {
   return (
     <div>
-      <div className="absolute bottom-4 left-1/2 z-0 flex -translate-x-1/2 items-center gap-4">
+      <div className="absolute bottom-4 left-1/2 -z-10 z-0 flex -translate-x-1/2 items-center gap-4">
         <ul className="flex w-full items-center gap-4">
           <li className="w-full text-nowrap border-r pr-4">
             <Link
