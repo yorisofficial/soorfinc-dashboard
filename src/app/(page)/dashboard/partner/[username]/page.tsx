@@ -1,6 +1,6 @@
-import ListStatistics from "@/app/components/ListStatistics";
-import CardServices from "@/app/components/Services/CardServices";
-import ListSchedules from "@/app/components/Schedules/ListSchedules";
+import ListStatistics from "@/app/components/partner/ListStatistics";
+import CardServices from "@/app/components/partner/Services/CardServices";
+import ListSchedules from "@/app/components/partner/Schedules/ListSchedules";
 import { AllSchedules } from "@/lib/data/Schedules";
 import { AllServices } from "@/lib/data/AllService";
 import { DataStatistics } from "@/lib/data/DataStatistics";

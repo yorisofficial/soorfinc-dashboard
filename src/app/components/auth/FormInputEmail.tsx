@@ -3,7 +3,7 @@
 import { random } from "@/lib/Random";
 import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
-import SoorfincLogo from "../acc/SoorfincLogo";
+import SoorfincLogo from "../partner/acc/SoorfincLogo";
 import Link from "next/link";
 
 const FormInputEmail = () => {

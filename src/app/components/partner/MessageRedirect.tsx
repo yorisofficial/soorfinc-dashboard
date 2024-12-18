@@ -19,14 +19,14 @@ const MessageRedirect = () => {
 
   return (
     <>
-      <div className="absolute left-0 top-0 z-50 flex h-screen w-full items-center justify-center bg-brand">
+      <div className="absolute left-0 top-0 z-50 flex h-screen w-full items-center justify-center bg-brand px-4">
         <Image
           src={"/Brand/soorfinc-logo-white.svg"}
           alt="Soorfinc logo"
           width={1500}
           height={500}
           priority
-          className="h-20 w-fit animate-pulse object-contain"
+          className="h-24 w-fit animate-pulse object-contain xl:h-20"
         />
       </div>
     </>

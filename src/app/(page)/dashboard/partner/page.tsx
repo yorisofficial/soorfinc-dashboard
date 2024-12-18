@@ -1,4 +1,4 @@
-import MessageRedirect from "@/app/components/MessageRedirect";
+import MessageRedirect from "@/app/components/partner/MessageRedirect";
 
 const DashboardHome = () => {
   return (

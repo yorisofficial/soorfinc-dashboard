@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import ButtonResetPassword from "../ButtonResetPassword";
+import ButtonResetPassword from "../partner/ButtonResetPassword";
 import Link from "next/link";
 import { Eye, EyeClosed, X } from "@phosphor-icons/react";
 import { useRouter } from "next/navigation";

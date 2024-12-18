@@ -1,5 +1,5 @@
 "use client";
-import WaveTexture from "@/app/components/acc/WaveTexture";
+import WaveTexture from "@/app/components/partner/acc/WaveTexture";
 import { Info } from "@phosphor-icons/react";
 import Link from "next/link";
 import React from "react";

@@ -1,6 +1,6 @@
 "use client";
 
-import WaveTexture from "@/app/components/acc/WaveTexture";
+import WaveTexture from "@/app/components/partner/acc/WaveTexture";
 import SelectRole from "@/app/components/auth/SelectRole";
 import Image from "next/image";
 import React from "react";

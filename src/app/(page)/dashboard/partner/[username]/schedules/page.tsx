@@ -1,8 +1,8 @@
-import FooterAuth from "@/app/components/FooterAuth";
-import SearchSchedules from "@/app/components/notification/SearchNotification";
-import ContentSchedules from "@/app/components/Schedules/ContentSchedules";
-import SortedSchedules from "@/app/components/Schedules/SortedSchedules";
-import WalkBack from "@/app/components/WalkBack";
+import FooterAuth from "@/app/components/partner/FooterAuth";
+import SearchSchedules from "@/app/components/partner/notification/SearchNotification";
+import ContentSchedules from "@/app/components/partner/Schedules/ContentSchedules";
+import SortedSchedules from "@/app/components/partner/Schedules/SortedSchedules";
+import WalkBack from "@/app/components/partner/WalkBack";
 import { AllSchedules } from "@/lib/data/Schedules";
 
 const SchedulesPage = () => {

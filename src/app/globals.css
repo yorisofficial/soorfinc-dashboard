@@ -11,6 +11,10 @@ body {
   @apply outline outline-red;
 }
 
+.py-space {
+  @apply py-[10px];
+}
+
 /* setup global main page */
 .container-content {
   @apply mx-auto h-fit min-h-screen w-full max-w-5xl px-4 pb-8 xl:px-0;

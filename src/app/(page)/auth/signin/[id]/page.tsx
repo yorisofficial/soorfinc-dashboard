@@ -1,8 +1,8 @@
 import FormLoginPartner from "@/app/components/auth/FormLoginPartner";
-import FooterAuth from "@/app/components/FooterAuth";
+import FooterAuth from "@/app/components/partner/FooterAuth";
 import Image from "next/image";
 import React from "react";
-import WaveTexture from "../../../../components/acc/WaveTexture";
+import WaveTexture from "../../../../components/partner/acc/WaveTexture";
 
 const AuthLogin = ({ params }: { params: { id: string } }) => {
   return (

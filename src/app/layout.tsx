@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import localFont from "next/font/local";
-import NavigationBarPartner from "./components/NavigationBar";
+import NavigationBarPartner from "./components/partner/NavigationBar";
+import NavigationAdmin from "./components/admin/NavigationAdmin";
 
 const Sora = localFont({
   src: "../../public/Font/Sora-VariableFont_wght.ttf",
@@ -23,6 +24,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={Sora.className}>
         <NavigationBarPartner />
+        <NavigationAdmin />
         {children}
       </body>
     </html>

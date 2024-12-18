@@ -1,7 +1,7 @@
-import LineSpaceY from "@/app/components/LineSpaceY";
-import SearchNotification from "@/app/components/notification/SearchNotification";
-import SortedNotification from "@/app/components/notification/SortedNotification";
-import WalkBack from "@/app/components/WalkBack";
+import LineSpaceY from "@/app/components/partner/LineSpaceY";
+import SearchNotification from "@/app/components/partner/notification/SearchNotification";
+import SortedNotification from "@/app/components/partner/notification/SortedNotification";
+import WalkBack from "@/app/components/partner/WalkBack";
 import { DataNotification } from "@/lib/data/DataNotification";
 import { Metadata } from "next";
 import Image from "next/image";

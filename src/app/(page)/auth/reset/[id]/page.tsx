@@ -1,6 +1,6 @@
-import SoorfincLogo from "@/app/components/acc/SoorfincLogo";
-import WaveTexture from "@/app/components/acc/WaveTexture";
-import FooterAuth from "@/app/components/FooterAuth";
+import SoorfincLogo from "@/app/components/partner/acc/SoorfincLogo";
+import WaveTexture from "@/app/components/partner/acc/WaveTexture";
+import FooterAuth from "@/app/components/partner/FooterAuth";
 import FormResetPassword from "@/app/components/auth/FormResetPassword";
 import React from "react";
 

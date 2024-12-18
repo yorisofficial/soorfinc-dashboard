@@ -17,17 +17,17 @@ import { usePathname } from "next/navigation";
 export const menus = [
   {
     title: "Dashboard",
-    url: "/dashboard/yorisofficial",
+    url: "/dashboard/partner/yorisofficial",
     IconBase: <Layout size={24} />,
   },
   {
     title: "Notifications",
-    url: "/dashboard/yorisofficial/notifications",
+    url: "/dashboard/partner/yorisofficial/notifications",
     IconBase: <Bell size={24} />,
   },
   {
     title: "Schedules",
-    url: "/dashboard/yorisofficial/schedules",
+    url: "/dashboard/partner/yorisofficial/schedules",
     IconBase: <Calendar size={24} />,
   },
   {
@@ -101,7 +101,7 @@ const NavigationBarPartner = () => {
           <div className="flex items-center justify-center gap-2 xl:relative xl:gap-4">
             <div className="relative">
               <Link
-                href={"/dashboard/yorisofficial/notifications"}
+                href={"/dashboard/partner/yorisofficial/notifications"}
                 className="flex p-4"
               >
                 <Bell size={24} weight="fill" />

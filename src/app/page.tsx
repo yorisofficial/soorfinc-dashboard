@@ -1,4 +1,4 @@
-import MessageRedirect from "./components/MessageRedirect";
+import MessageRedirect from "./components/partner/MessageRedirect";
 
 export default function Home() {
   return (

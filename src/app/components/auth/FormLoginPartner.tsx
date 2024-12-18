@@ -4,7 +4,7 @@ import { Eye, EyeClosed, GoogleLogo, X } from "@phosphor-icons/react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
-import ButtonResetPassword from "../ButtonResetPassword";
+import ButtonResetPassword from "../partner/ButtonResetPassword";
 import { AdminUser } from "@/lib/admin/data";
 
 const FormLoginPartner = ({ getParams }: { getParams: string }) => {

@@ -1,8 +1,8 @@
-import SoorfincLogo from "@/app/components/acc/SoorfincLogo";
-import WaveTexture from "@/app/components/acc/WaveTexture";
+import SoorfincLogo from "@/app/components/partner/acc/SoorfincLogo";
+import WaveTexture from "@/app/components/partner/acc/WaveTexture";
 import FormInputEmail from "@/app/components/auth/FormInputEmail";
-import FooterAuth from "@/app/components/FooterAuth";
-import LineSpaceY from "@/app/components/LineSpaceY";
+import FooterAuth from "@/app/components/partner/FooterAuth";
+import LineSpaceY from "@/app/components/partner/LineSpaceY";
 import React from "react";
 
 const InputEmailPage = () => {
