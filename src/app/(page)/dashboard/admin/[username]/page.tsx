@@ -1,9 +1,12 @@
+import TablePartner from "@/app/components/admin/TablePartner";
 import React from "react";
 
 const AdminMainDashboard = () => {
   return (
-    <div className="flex h-screen w-full items-center justify-center">
-      AdminMainDashboard
+    <div className="top-margin">
+      <div className="container-content">
+        <TablePartner />
+      </div>
     </div>
   );
 };

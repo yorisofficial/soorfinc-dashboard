@@ -11,10 +11,6 @@ body {
   @apply outline outline-red;
 }
 
-.py-space {
-  @apply py-[10px];
-}
-
 /* setup global main page */
 .container-content {
   @apply mx-auto h-fit min-h-screen w-full max-w-5xl px-4 pb-8 xl:px-0;
@@ -73,3 +69,14 @@ scrollbar {
   height: 200px;
   overflow-y: scroll; /* Scroll vertikal */
 }
+
+/* table style */
+
+.table-header {
+  @apply border-b-2 border-r-2 border-bordered px-4 py-2 text-left text-primary/80;
+}
+
+.table-body {
+  @apply border-b-2 border-r-2 border-bordered px-4 py-2 text-left text-primary/80;
+}
+/* end table style */
