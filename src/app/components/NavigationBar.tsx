@@ -42,7 +42,7 @@ export const menus = [
   },
 ];
 
-const NavigationBar = () => {
+const NavigationBarPartner = () => {
   const ref = useRef<HTMLDivElement>(null);
   const [scroll, setScroll] = useState(false);
   const [show, setShow] = useState(false);
@@ -84,7 +84,7 @@ const NavigationBar = () => {
     <>
       <div
         ref={ref}
-        className={`${scroll && "bg-foreground"} ${pathName.includes("auth") && "hidden"} navigation-bar-container fixed left-0 top-0 z-40 w-full border-b border-bordered px-4 py-5 drop-shadow-xl transition-all`}
+        className={`${scroll && "bg-foreground"} ${pathName.includes("admin") && "hidden"} ${pathName.includes("auth") && "hidden"} navigation-bar-container fixed left-0 top-0 z-40 w-full border-b border-bordered px-4 py-5 drop-shadow-xl transition-all`}
       >
         <div className="navigation-bar mx-auto flex h-fit w-full max-w-5xl items-center justify-between gap-4">
           <div className="brand-logo">
@@ -165,4 +165,4 @@ const NavigationBar = () => {
   );
 };
 
-export default NavigationBar;
+export default NavigationBarPartner;

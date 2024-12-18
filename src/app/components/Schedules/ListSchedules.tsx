@@ -17,7 +17,7 @@ const ListSchedules = ({ data }: { data: SchedulesProps[] }) => {
             Your schedules
           </h1>
           <Link
-            href={"/dashboard/yorisofficial/schedules"}
+            href={"/dashboard/partner/yorisofficial/schedules"}
             aria-label="details schedule"
             className="flex items-center gap-2 rounded-inner bg-brand py-2 pl-4 pr-2 text-xs text-primary duration-300 hover:bg-brand/90 xl:text-sm"
           >
@@ -37,7 +37,7 @@ const ListSchedules = ({ data }: { data: SchedulesProps[] }) => {
         <div className="list-schedules flex h-[500px] w-full flex-col gap-2 overflow-y-scroll">
           {data.map((item) => (
             <Link
-              href={`/schedule/${item.booking}`}
+              href={`/dashboard/partner/yorisofficial/schedules?id=${item.booking}`}
               key={item.id}
               className="item-schedule group flex w-full items-start justify-between rounded-soorfinc border border-bordered p-4 transition-all duration-300 hover:bg-background"
             >

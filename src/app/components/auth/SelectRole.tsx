@@ -1,9 +1,11 @@
 "use client";
 
+import { AdminUser } from "@/lib/admin/data";
 import {
   ArrowCircleRight,
   CheckCircle,
   Circle,
+  IdentificationBadge,
   User,
   UsersThree,
 } from "@phosphor-icons/react";
@@ -27,13 +29,24 @@ export const dataRole = [
     iconActive: <UsersThree weight="fill" size={32} className="" />,
     roleId: "partner",
   },
+  {
+    title: AdminUser,
+    iconBase: (
+      <IdentificationBadge
+        size={32}
+        className="text-brand group-hover:text-primary"
+      />
+    ),
+    iconActive: <IdentificationBadge weight="fill" size={32} className="" />,
+    roleId: AdminUser,
+  },
 ];
 
 const SelectRole = () => {
   const router = useRouter();
   const [disable, setDisable] = useState(true);
 
-  const [role, setRole] = useState("");
+  const [role, setRole] = useState<string | null>(AdminUser);
 
   useEffect(() => {
     if (role) {
@@ -49,12 +62,14 @@ const SelectRole = () => {
     }
     if (role === "customer") {
       router.push(`https://soorfinc.vercel.app/en/user-auth/signin`);
-    } else if (role === "partner") {
+    } else if (role === "partner" || role === AdminUser) {
       router.push(`/auth/signin/${role}`);
     } else {
       setDisable(true);
     }
   };
+
+  console.log(role);
 
   return (
     <>

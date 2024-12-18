@@ -22,13 +22,13 @@ const AuthLogin = ({ params }: { params: { id: string } }) => {
             />
           </div>
           <div className="w-full text-center">
-            <h1 className="text-3xl font-black">Hello partner</h1>
+            <h1 className="text-3xl font-black">Hello {params.id}</h1>
             <p className="text-sm font-light">
               Welcome back, Please enter your details
             </p>
           </div>
           <hr className="my-1 w-full" />
-          <FormLoginPartner />
+          <FormLoginPartner getParams={params.id} />
         </div>
       </div>
       <FooterAuth />

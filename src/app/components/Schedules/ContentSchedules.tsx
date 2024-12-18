@@ -65,7 +65,7 @@ const ContentSchedules = ({ data }: { data: SchedulesProps[] }) => {
                   <button
                     type="button"
                     onClick={() => handleRouter(item.id)}
-                    className="item-schedules group relative flex w-full cursor-pointer items-start justify-start gap-4 rounded-inner border border-bordered p-4 hover:bg-background"
+                    className={`item-schedules group relative flex w-full cursor-pointer items-start justify-start gap-4 rounded-inner border border-bordered p-4 hover:bg-background ${getParamsSchedule === item?.id ? "bg-background" : ""}`}
                   >
                     <div className="h-10 w-10 overflow-hidden rounded-full">
                       <Image

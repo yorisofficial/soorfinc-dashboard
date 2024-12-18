@@ -1,7 +1,6 @@
 import MessageRedirect from "@/app/components/MessageRedirect";
-import React from "react";
 
-const DashboardMain = () => {
+const AdminDashboard = () => {
   return (
     <>
       <MessageRedirect />
@@ -9,4 +8,4 @@ const DashboardMain = () => {
   );
 };
 
-export default DashboardMain;
+export default AdminDashboard;

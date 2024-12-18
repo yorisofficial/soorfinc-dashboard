@@ -5,8 +5,9 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import ButtonResetPassword from "../ButtonResetPassword";
+import { AdminUser } from "@/lib/admin/data";
 
-const FormLoginPartner = () => {
+const FormLoginPartner = ({ getParams }: { getParams: string }) => {
   const router = useRouter();
   const [email, setEmail] = useState("aaaaaaa@example.com");
   const [password, setPassword] = useState("12345678");
@@ -31,7 +32,9 @@ const FormLoginPartner = () => {
     e.preventDefault();
     if (email) {
       // router.push(`/auth/success/${random}`);
-      router.push(`/dashboard/yorisofficial`);
+      router.push(
+        `/dashboard/${getParams}/${getParams === AdminUser ? "dev@asiansurf.co" : "yorisofficial"}`,
+      );
     }
   };
 
@@ -124,33 +127,39 @@ const FormLoginPartner = () => {
           </button>
         </div>
       </form>
-      <div className="my-4 flex items-center gap-2">
-        <hr className="w-full" />
-        <span>or</span>
-        <hr className="w-full" />
-      </div>
-      <div className="login-google-platform">
-        <Link
-          href={"/"}
-          aria-label="login with google account"
-          className="flex w-full items-center justify-center gap-2 rounded-soorfinc bg-brand py-3 text-primary duration-300 hover:bg-brand/90"
-        >
-          <GoogleLogo size={24} weight="bold" />
-          Login with Google
-        </Link>
-      </div>
-      <div className="mt-4 flex flex-col gap-2 text-center">
-        <ButtonResetPassword />
-        <span className="text-sm">
-          Already have account?{" "}
+      {getParams !== AdminUser && (
+        <div className="my-4 flex items-center gap-2">
+          <hr className="w-full" />
+          <span>or</span>
+          <hr className="w-full" />
+        </div>
+      )}
+      {getParams !== AdminUser && (
+        <div className="login-google-platform">
           <Link
-            href={`/auth/reset/input-email`}
-            aria-label="forget password"
-            className="text-center font-semibold text-brand underline underline-offset-4"
+            href={"/"}
+            aria-label="login with google account"
+            className="flex w-full items-center justify-center gap-2 rounded-soorfinc bg-brand py-3 text-primary duration-300 hover:bg-brand/90"
           >
-            Click here
+            <GoogleLogo size={24} weight="bold" />
+            Login with Google
           </Link>
-        </span>
+        </div>
+      )}
+      <div className="mt-4 flex flex-col gap-2 text-center">
+        {getParams !== AdminUser && <ButtonResetPassword />}
+        {getParams !== AdminUser && (
+          <span className="text-sm">
+            Already have account?{" "}
+            <Link
+              href={`/auth/reset/input-email`}
+              aria-label="forget password"
+              className="text-center font-semibold text-brand underline underline-offset-4"
+            >
+              Click here
+            </Link>
+          </span>
+        )}
       </div>
     </div>
   );
