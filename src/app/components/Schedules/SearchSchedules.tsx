@@ -3,7 +3,7 @@
 import { MagnifyingGlass } from "@phosphor-icons/react";
 import React from "react";
 
-const SearchSchedules = () => {
+const SearchNotification = () => {
   return (
     <>
       <div className="search-bar w-[180px]">
@@ -28,4 +28,4 @@ const SearchSchedules = () => {
   );
 };
 
-export default SearchSchedules;
+export default SearchNotification;

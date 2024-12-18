@@ -12,7 +12,6 @@ const CardStatistics = ({ title, value, icon }: Props) => {
     <>
       <div className="card-item flex h-[160px] w-full flex-col gap-4 rounded-soorfinc bg-foreground p-4">
         <div className="header-content flex flex-col items-start justify-center gap-2">
-          {icon}
           <span className="text-base font-semibold">{title}</span>
         </div>
         <div className="content flex w-full items-start justify-start">

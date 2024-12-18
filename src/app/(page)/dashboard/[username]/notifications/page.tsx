@@ -2,50 +2,18 @@ import LineSpaceY from "@/app/components/LineSpaceY";
 import SearchNotification from "@/app/components/notification/SearchNotification";
 import SortedNotification from "@/app/components/notification/SortedNotification";
 import WalkBack from "@/app/components/WalkBack";
+import { DataNotification } from "@/lib/data/DataNotification";
 import { Metadata } from "next";
 import Image from "next/image";
 import React, { Fragment } from "react";
 
-export const metadata: Metadata = {
-  title: "Partner | Notifications",
-  description:
-    "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit veritatis, dolorum quia vitae blanditiis deleniti magnam quo officiis iure, cumque, saepe eius harum sapiente? Quaerat nihil, doloribus asperiores dignissimos eligendi reprehenderit sit?",
-};
-
-export const DataNotification = [
-  {
-    id: "asssss",
-    title: "Notification 1",
-    picture: "/Dummy/profile-picture.png",
-    description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit veritatis, dolorum quia vitae blanditiis deleniti magnam quo officiis iure, cumque, saepe eius harum sapiente? Quaerat nihil, doloribus asperiores dignissimos eligendi reprehenderit sit?",
-  },
-  {
-    id: "adddd",
-    title: "Notification 2",
-    picture: "/Dummy/profile-picture.png",
-    description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit veritatis, dolorum quia vitae blanditiis deleniti magnam quo officiis iure, cumque, saepe eius harum sapiente? Quaerat nihil, doloribus asperiores dignissimos eligendi reprehenderit sit?",
-  },
-  {
-    id: "axxxx",
-    title: "Notification 3",
-    picture: "/Dummy/profile-picture.png",
-    description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit veritatis, dolorum quia vitae blanditiis deleniti magnam quo officiis iure, cumque, saepe eius harum sapiente? Quaerat nihil, doloribus asperiores dignissimos eligendi reprehenderit sit?",
-  },
-];
-
 const NotificationPage = () => {
   return (
-    <div className="container-content flex w-full flex-col gap-4 xl:gap-5">
-      <WalkBack />
+    <div className="container-content top-margin">
+      <WalkBack title="All Notification" />
       <div className="content-notification">
-        <div className="main-content xl:mt-5">
-          <div className="header-main-content w-full">
-            <h1 className="text-xl font-bold xl:text-2xl">All Notification</h1>
-          </div>
-          <div className="header-content mt-4 flex w-full items-center justify-between">
+        <div className="main-content mt-4 xl:mt-5">
+          <div className="header-content mt-4 flex w-full items-center justify-between gap-4">
             <SortedNotification />
             <SearchNotification />
           </div>

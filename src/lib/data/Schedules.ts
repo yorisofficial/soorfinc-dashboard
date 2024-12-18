@@ -6,6 +6,7 @@ export interface SchedulesProps {
   gender: string;
   age: number;
   phone: string;
+  service: string;
   email: string;
   session: string;
   date: string;
@@ -21,6 +22,7 @@ export const AllSchedules: SchedulesProps[] = [
     picture: "/Dummy/profile-picture.png",
     fullName: "John Doe",
     gender: "male",
+    service: "example name service #1",
     age: 25,
     phone: "08123456789",
     email: "m9KcU@example.com",
@@ -36,6 +38,7 @@ export const AllSchedules: SchedulesProps[] = [
     picture: "/Dummy/profile-picture.png",
     fullName: "John Doe",
     gender: "male",
+    service: "example name service #2",
     age: 25,
     phone: "08123456789",
     email: "m9KcU@example.com",
@@ -51,6 +54,7 @@ export const AllSchedules: SchedulesProps[] = [
     picture: "/Dummy/profile-picture.png",
     fullName: "John Doe",
     gender: "male",
+    service: "example name service #3",
     age: 25,
     phone: "08123456789",
     email: "m9KcU@example.com",
@@ -66,6 +70,7 @@ export const AllSchedules: SchedulesProps[] = [
     picture: "/Dummy/profile-picture.png",
     fullName: "John Doe",
     gender: "male",
+    service: "example name service #4",
     age: 25,
     phone: "08123456789",
     email: "m9KcU@example.com",

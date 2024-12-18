@@ -3,6 +3,7 @@
 import { CheckCircle, HourglassMedium, X } from "@phosphor-icons/react";
 import React from "react";
 
+
 const StatusBadges = ({ status }: { status: string }) => {
   switch (status) {
     case "success":

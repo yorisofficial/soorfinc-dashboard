@@ -7,7 +7,7 @@ import WaveTexture from "../../../../components/acc/WaveTexture";
 const AuthLogin = ({ params }: { params: { id: string } }) => {
   return (
     <div className="relative min-h-screen w-full overflow-hidden bg-brand px-4 text-primary xl:px-0">
-      <WaveTexture />
+      <WaveTexture zindex={"z-10"} />
       <div className="content-signin my-8 flex h-screen w-full items-center justify-center xl:my-0">
         <div className="relative z-10 flex w-[400px] flex-col items-center justify-center gap-4 rounded-soorfinc bg-[#ffffff] p-8 text-background xl:w-[500px]">
           <div className="logo-brand">

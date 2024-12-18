@@ -1,19 +1,11 @@
 "use client";
-import React from "react";
+import React, { Fragment } from "react";
 import CardStatistics from "./CardStatistics";
+import { StatisticsProps } from "@/lib/data/DataStatistics";
 
-interface Props {
-  data: {
-    id: string;
-    title: string;
-    value: number;
-    icon: React.ReactNode;
-  }[];
-}
-
-const ListStatistics = ({ data }: Props) => {
+const ListStatistics = ({ data }: { data: StatisticsProps[] }) => {
   return (
-    <>
+    <Fragment>
       <div className="card-statistics grid h-fit grid-cols-2 gap-4 xl:grid-cols-4 xl:gap-5">
         {data.map((item) => (
           <CardStatistics
@@ -24,7 +16,7 @@ const ListStatistics = ({ data }: Props) => {
           />
         ))}
       </div>
-    </>
+    </Fragment>
   );
 };
 
