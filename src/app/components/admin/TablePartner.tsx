@@ -73,18 +73,18 @@ export const pagination = [
 const TablePartner = () => {
   return (
     <div className="mx-auto w-full max-w-5xl">
-      <div className="flex max-w-5xl flex-col gap-6 overflow-x-auto">
-        <div className="flex w-full items-center justify-between">
-          <h1 className="text-2xl font-semibold">List all partner</h1>
-          <div className="w-fit">
-            <Link
-              href={"/"}
-              className="flex items-center justify-center gap-2 rounded-soorfinc bg-brand px-4 py-2 text-primary duration-300 hover:bg-brand/90"
-            >
-              See more
-            </Link>
-          </div>
+      <div className="flex w-full items-center justify-between">
+        <h1 className="text-2xl font-semibold">List all partner</h1>
+        <div className="w-fit">
+          <Link
+            href={"/"}
+            className="flex items-center justify-center gap-2 rounded-soorfinc bg-brand px-4 py-2 text-primary duration-300 hover:bg-brand/90"
+          >
+            See more
+          </Link>
         </div>
+      </div>
+      <div className="table-container mt-6 flex max-w-5xl flex-col overflow-x-auto xl:mt-8">
         <table className="table-partner">
           <thead>
             <tr className="flex items-start">
@@ -118,8 +118,11 @@ const TablePartner = () => {
                   {item.partnership.length}
                 </td>
                 <td className="table-body flex w-fit min-w-[100px] items-center justify-center">
-                  <Link href={"/"} className="flex">
-                    <Eye size={24} />
+                  <Link
+                    href={"/"}
+                    className="flex rounded-inner bg-primary p-1 text-background"
+                  >
+                    <Eye size={16} />
                   </Link>
                 </td>
               </tr>

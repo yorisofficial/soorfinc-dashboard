@@ -104,8 +104,6 @@ const NavigationAdmin = () => {
     };
   }, [scroll, showMenus]);
 
-  console.log(showMenus);
-
   return (
     <>
       <div
