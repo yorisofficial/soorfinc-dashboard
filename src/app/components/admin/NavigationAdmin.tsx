@@ -68,32 +68,32 @@ export const manajementContent = [
 const NavigationAdmin = () => {
   const ref = useRef<HTMLDivElement>(null);
   const [scroll, setScroll] = useState(false);
-  const [show, setShow] = useState(false);
+  const [showMenus, setshowMenus] = useState(false);
   const router = useRouter();
   const pathName = usePathname();
 
   // function toggle menu
   const toggleMenu = () => {
-    setShow(!show);
+    setshowMenus(!showMenus);
   };
 
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 0) {
         setScroll(true);
-        if (show) {
-          setShow(false);
+        if (showMenus) {
+          setshowMenus(false);
         }
       } else {
         setScroll(false);
-        setShow(false);
+        setshowMenus(false);
       }
     };
 
     // outside click
     document.addEventListener("click", (e) => {
       if (ref.current && !ref.current.contains(e.target as Node)) {
-        setShow(false);
+        setshowMenus(false);
       }
     });
 
@@ -102,7 +102,9 @@ const NavigationAdmin = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [scroll, show]);
+  }, [scroll, showMenus]);
+
+  console.log(showMenus);
 
   return (
     <>
@@ -122,25 +124,30 @@ const NavigationAdmin = () => {
               />
             </Link>
           </div>
-          <div className="toggle-menus relative w-fit">
-            <div className="h-fit w-fit">
+          <div className="toggle-menus relative z-10 w-fit">
+            <div className="toggle-button">
               <button
                 type="button"
                 onClick={() => toggleMenu()}
                 title="toggle menu navigastion"
                 aria-label="toggle menu navigastion"
-                className={`rounded $ relative flex h-fit w-fit items-center justify-center gap-2 rounded-inner bg-foreground p-3`}
+                className={`btn-toggle border border-background ${showMenus && "bg-red"} relative flex h-fit w-fit items-center justify-center gap-4 rounded-full bg-foreground px-3 py-2`}
               >
+                <div
+                  className={`flex h-8 w-8 items-center justify-center rounded-full ${showMenus ? "border border-foreground bg-foreground" : "bg-red"}`}
+                >
+                  <Users size={16} weight="fill" />
+                </div>
                 {"Admin"}
-                {show ? (
-                  <X size={25} className="" />
+                {showMenus ? (
+                  <X size={16} className="" />
                 ) : (
-                  <List size={25} className="" />
+                  <List size={16} className="" />
                 )}{" "}
               </button>
             </div>
-            {show && (
-              <div className="absolute-menu absolute right-0 top-full z-40 w-[230px] translate-y-5 rounded-soorfinc bg-foreground p-4">
+            {showMenus && (
+              <div className="absolute-menu absolute right-0 top-full z-40 w-[230px] translate-y-8 rounded-soorfinc border border-background bg-foreground p-4">
                 <div className="profile-tag relative flex flex-col gap-4 overflow-hidden rounded-soorfinc bg-[#0F172A] p-2">
                   <div className="acc absolute -right-8 -top-6 h-[100px] w-[100px] rounded-full bg-red/20"></div>
                   <div className="acc absolute -right-4 -top-4 h-[50px] w-[50px] animate-pulse rounded-full bg-[#C9C9C9]/20"></div>
@@ -187,9 +194,10 @@ const NavigationAdmin = () => {
                       <li key={index} className="">
                         <button
                           type="button"
+                          disabled={!item.status}
                           aria-label="item menus"
                           onClick={() => router.push(item.url)}
-                          className="flex w-full items-start justify-center gap-2 py-2 text-primary hover:text-brand"
+                          className={`flex w-full items-start justify-center gap-2 py-2 text-primary hover:text-brand disabled:opacity-20 disabled:hover:text-primary`}
                         >
                           {item.IconBase}
                           {item.title}
@@ -203,7 +211,7 @@ const NavigationAdmin = () => {
                   <button
                     type="button"
                     aria-label="logout"
-                    className="flex w-full items-center justify-center gap-4 rounded-inner bg-red px-4 py-2 text-center text-primary"
+                    className="flex w-full items-center justify-center gap-4 rounded-inner bg-red px-4 py-2 text-center text-primary duration-300 hover:bg-red/80"
                   >
                     <Power size={20} /> Log out
                   </button>

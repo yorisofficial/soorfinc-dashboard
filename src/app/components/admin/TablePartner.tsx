@@ -50,22 +50,22 @@ export const pagination = [
   },
   {
     id: "2",
-    page: 1,
+    page: 2,
     isActive: false,
   },
   {
     id: "3",
-    page: 1,
+    page: 3,
     isActive: false,
   },
   {
     id: "4",
-    page: 1,
+    page: 4,
     isActive: false,
   },
   {
     id: "5",
-    page: 1,
+    page: 5,
     isActive: false,
   },
 ];
@@ -73,11 +73,24 @@ export const pagination = [
 const TablePartner = () => {
   return (
     <div className="mx-auto w-full max-w-5xl">
-      <div className="max-w-5xl overflow-x-auto">
-        <table className="">
+      <div className="flex max-w-5xl flex-col gap-6 overflow-x-auto">
+        <div className="flex w-full items-center justify-between">
+          <h1 className="text-2xl font-semibold">List all partner</h1>
+          <div className="w-fit">
+            <Link
+              href={"/"}
+              className="flex items-center justify-center gap-2 rounded-soorfinc bg-brand px-4 py-2 text-primary duration-300 hover:bg-brand/90"
+            >
+              See more
+            </Link>
+          </div>
+        </div>
+        <table className="table-partner">
           <thead>
             <tr className="flex items-start">
-              <th className="table-header w-fit min-w-[100px]">Id</th>
+              <th className="table-header w-fit min-w-[100px] text-center">
+                Id
+              </th>
               <th className="table-header w-fit min-w-[200px] xl:min-w-[424px]">
                 Full name
               </th>
@@ -93,7 +106,9 @@ const TablePartner = () => {
                 key={item.id}
                 className={`flex items-start ${index % 2 === 0 ? "bg-background" : "bg-foreground"}`}
               >
-                <td className="table-body w-fit min-w-[100px]">{item.id}</td>
+                <td className="table-body w-fit min-w-[100px] text-center">
+                  {item.id}
+                </td>
                 <td className="table-body w-fit min-w-[200px] xl:min-w-[424px]">
                   {item.fullName}
                 </td>
@@ -114,19 +129,19 @@ const TablePartner = () => {
       </div>
       <div className="pagination flex w-full items-center justify-center py-4">
         <div className="flex items-center justify-center gap-2">
-          <button className="flex h-10 items-center justify-center gap-2 rounded-inner border border-bordered px-4 py-2 xl:w-[100px]">
+          <button className="flex h-10 items-center justify-center gap-2 rounded-inner border border-bordered px-4 py-2 duration-300 hover:bg-brand xl:min-w-[150px] xl:justify-between">
             <ArrowLeft size={20} className="hidden xl:inline-block" /> Previous
           </button>
           {pagination.map((item) => (
             <div key={item.id} className="">
               <button
-                className={`h-8 w-8 rounded-inner bg-background ${item.isActive ? "bg-brand text-primary" : ""}`}
+                className={`h-8 w-8 rounded-inner bg-background duration-300 hover:bg-foreground ${item.isActive ? "bg-brand text-primary" : ""}`}
               >
                 {item.page}
               </button>
             </div>
           ))}
-          <button className="flex h-10 items-center justify-center gap-2 rounded-inner border border-bordered px-4 py-2 xl:w-[100px]">
+          <button className="flex h-10 items-center justify-center gap-2 rounded-inner border border-bordered px-4 py-2 duration-300 hover:bg-brand xl:min-w-[150px] xl:justify-between">
             Next <ArrowRight size={20} className="hidden xl:inline-block" />
           </button>
         </div>
