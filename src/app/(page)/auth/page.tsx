@@ -21,7 +21,7 @@ const AuthPage = () => {
           />
         </div>
         <div className="w-full text-center">
-          <h1 className="text-3xl font-black">Wellcome back</h1>
+          <h1 className="text-3xl font-black">Welcome back</h1>
           <p className="text-base font-light">
             Welcome back, Please select your role
           </p>

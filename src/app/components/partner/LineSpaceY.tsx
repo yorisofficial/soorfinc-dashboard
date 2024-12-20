@@ -5,7 +5,7 @@ import React from "react";
 const LineSpaceY = ({ className }: { className?: string }) => {
   return (
     <>
-      <hr className={`${className ? className : "my-6 text-lightblack/20"}`} />
+      <hr className={`${className ? className : "my-4 text-primary/20"}`} />
     </>
   );
 };

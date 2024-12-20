@@ -25,11 +25,8 @@ const ListSchedules = ({ data }: { data: SchedulesProps[] }) => {
             <ArrowUpRight size={16} className="flex-shrink-0" />
           </Link>
         </div>
-        <LineSpaceY />
-        <div className="sorted-section mb-4 flex w-full items-center justify-between">
-          <button className="rounded-soorfinc bg-background px-4 py-2 text-primary">
-            Show more
-          </button>
+        <LineSpaceY className="my-4 text-primary/20" />
+        <div className="sorted-section mb-4 flex w-full items-start justify-start">
           <button className="rounded-soorfinc bg-background px-4 py-2 text-primary">
             Sort by newest
           </button>
