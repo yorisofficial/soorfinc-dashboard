@@ -11,6 +11,20 @@ body {
   @apply outline outline-red;
 }
 
+/* input setup */
+
+input[type="date"] {
+  color: white; /* Mengubah warna teks menjadi putih */
+  background-color: transparent;
+  @apply /* Mengubah latar belakang menjadi transparan */ bg-background;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1); /* Mengubah warna ikon menjadi putih */
+}
+
+/* end input setup */
+
 /* setup global main page */
 .container-content {
   @apply mx-auto h-fit min-h-screen w-full max-w-5xl px-4 pb-8 xl:px-0;
@@ -80,3 +94,9 @@ scrollbar {
   @apply border-b-2 border-r-2 border-bordered px-4 py-2 text-left text-primary/80;
 }
 /* end table style */
+
+/* Partner contact */
+.contact-box {
+  @apply flex flex-col items-center justify-center gap-2 rounded-inner border border-background bg-background p-4 text-sm text-primary hover:border-primary hover:bg-foreground/90;
+}
+/* end Partner contact */

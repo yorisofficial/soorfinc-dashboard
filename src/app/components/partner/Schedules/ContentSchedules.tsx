@@ -4,9 +4,8 @@ import { AllSchedules, SchedulesProps } from "@/lib/data/Schedules";
 import React, { Fragment, Suspense, useState } from "react";
 import StatusBadges from "../StatusBadges";
 import Image from "next/image";
-import { ArrowUpRight, List, X } from "@phosphor-icons/react";
+import { ArrowUpRight, X } from "@phosphor-icons/react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
-import LineSpaceY from "../LineSpaceY";
 import InformationDetailsSchedule from "./InformationDetailsSchedule";
 
 const ContentSchedules = ({ data }: { data: SchedulesProps[] }) => {

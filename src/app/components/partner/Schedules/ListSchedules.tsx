@@ -34,7 +34,7 @@ const ListSchedules = ({ data }: { data: SchedulesProps[] }) => {
         <div className="list-schedules flex h-[500px] w-full flex-col gap-2 overflow-y-scroll">
           {data.map((item) => (
             <Link
-              href={`/dashboard/partner/yorisofficial/schedules?id=${item.booking}`}
+              href={`/dashboard/partner/yorisofficial/schedules?id=${item.id}`}
               key={item.id}
               className="item-schedule group flex w-full items-start justify-between rounded-soorfinc border border-bordered p-4 transition-all duration-300 hover:bg-background"
             >
