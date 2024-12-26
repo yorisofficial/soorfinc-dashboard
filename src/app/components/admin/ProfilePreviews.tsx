@@ -43,17 +43,17 @@ const ProfilePreviews = ({
         </div>
         <div className="contact-person mt-4 rounded-soorfinc border border-bordered bg-foreground p-4">
           <h1 className="text-base font-bold">Personal contact</h1>
-          <div className="mt-4 grid grid-cols-3 items-center justify-center gap-3">
+          <div className="mt-4 grid grid-cols-3 gap-4">
             <Link href={"/"} className="contact-box">
-              <Phone size={24} />
+              <Phone size={24} className="h-8 w-8" />
               Phone number
             </Link>
             <Link href={"/"} className="contact-box">
-              <EnvelopeSimple size={24} />
-              Email addres
+              <EnvelopeSimple size={24} className="h-8 w-8" />
+              Email address
             </Link>
             <Link href={"/"} className="contact-box">
-              <WhatsappLogo size={24} />
+              <WhatsappLogo size={24} className="h-8 w-8" />
               WhatsApp
             </Link>
           </div>

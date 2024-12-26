@@ -13,14 +13,20 @@ const TablePartner = () => {
 
   return (
     <div className="mx-auto w-full max-w-5xl">
-      <div className="flex w-full items-center justify-between">
+      <div className="flex w-full flex-col items-start justify-start gap-4">
         <h1 className="text-2xl font-semibold">List all partner</h1>
-        <div className="w-fit">
+        <div className="flex w-full items-center justify-between gap-2 xl:w-fit xl:gap-4">
+          <Link
+            href={`${pathName}/list-partner`}
+            className="flex items-center justify-center gap-2 rounded-soorfinc border border-brand px-4 py-2 text-primary duration-300 hover:bg-brand/90"
+          >
+            Upload file
+          </Link>
           <Link
             href={`${pathName}/list-partner`}
             className="flex items-center justify-center gap-2 rounded-soorfinc bg-brand px-4 py-2 text-primary duration-300 hover:bg-brand/90"
           >
-            See more
+            Add new user
           </Link>
         </div>
       </div>
@@ -50,7 +56,12 @@ const TablePartner = () => {
                   {item.id}
                 </td>
                 <td className="table-body w-[200px] truncate xl:min-w-[424px]">
-                  {item.fullName}
+                  <Link
+                    href={`${isActivePath ? `${pathName}/${item.slug}` : `/dashboard/admin/dev@asiansurf.co/list-partner/${item.slug}`}`}
+                    className="underline-offset-4 hover:underline"
+                  >
+                    {item.fullName}
+                  </Link>
                 </td>
                 <td className="table-body w-[200px] truncate">{item.email}</td>
                 <td className="table-body w-[200px] truncate">{item.phone}</td>

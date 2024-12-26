@@ -10,7 +10,10 @@ import SelectSection from "./SelectSection";
 const FormServiceDetails = () => {
   return (
     <>
-      <form action="" className="grid grid-cols-2 gap-4 xl:gap-5">
+      <form
+        action=""
+        className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:gap-5"
+      >
         <div className="flex flex-col items-start gap-2">
           <InputText
             name="servicename"
@@ -42,7 +45,7 @@ const FormServiceDetails = () => {
           <LineSpaceY className="w-full text-primary/20" />
           <div className="input-image w-full">
             <h1 className="text-lg font-bold">Add picture service</h1>
-            <div className="mt-4 grid w-full grid-cols-4 items-center gap-2 xl:grid-cols-2">
+            <div className="mt-4 grid w-full grid-cols-2 items-center gap-2 md:grid-cols-4 xl:grid-cols-2">
               <label htmlFor="img-1">
                 <button
                   onClick={() => document.getElementById("img-1")!.click()}

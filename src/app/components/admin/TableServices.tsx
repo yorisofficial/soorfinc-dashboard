@@ -75,7 +75,12 @@ const TableServices = ({
                   {item.idService}
                 </td>
                 <td className="table-body h-10 w-[350px] truncate text-sm">
-                  {item.title}
+                  <Link
+                    href={`${pathName}/${item.idService}`}
+                    className="underline-offset-4 hover:underline"
+                  >
+                    {item.title}
+                  </Link>
                 </td>
                 <td className="table-body h-10 w-full min-w-[200px] max-w-[400px] truncate text-sm">
                   {item.description}

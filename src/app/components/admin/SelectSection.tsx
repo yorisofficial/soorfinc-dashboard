@@ -13,7 +13,7 @@ const SelectSection = ({ title, startTime, endTime }: Props) => {
   return (
     <>
       <label htmlFor="section-1" className="section-select w-full">
-        <span className="capitalize">{title}</span>
+        <span className="text-sm capitalize">{title}</span>
         <div className="mt-2 flex items-center gap-2">
           <select
             name="section-1"

@@ -97,6 +97,6 @@ scrollbar {
 
 /* Partner contact */
 .contact-box {
-  @apply flex flex-col items-center justify-center gap-2 rounded-inner border border-background bg-background p-4 text-sm text-primary hover:border-primary hover:bg-foreground/90;
+  @apply flex flex-col items-center justify-between gap-2 rounded-inner border border-background bg-background p-4 text-center text-xs text-primary hover:border-primary hover:bg-foreground/90 md:text-sm;
 }
 /* end Partner contact */

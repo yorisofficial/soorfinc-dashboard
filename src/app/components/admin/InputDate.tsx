@@ -29,7 +29,7 @@ const InputDate = ({
           value={new Date(value).toISOString().split("T")[0]}
           onChange={onChange}
           placeholder={placeholder || ""}
-          className={`${className} mt-1 w-full rounded-inner border border-bordered bg-background px-4 py-2 text-primary`}
+          className={`${className} mt-1 w-full rounded-inner border border-bordered bg-background px-4 py-2 text-primary outline-none`}
         />
       </label>
     </>

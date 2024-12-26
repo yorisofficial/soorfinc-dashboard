@@ -29,7 +29,7 @@ const InputText = ({
           value={value!}
           onChange={onChange}
           placeholder={placeholder || ""}
-          className={`${className} mt-1 w-full rounded-inner border border-bordered bg-background px-4 py-2`}
+          className={`${className} mt-1 w-full rounded-inner border border-bordered bg-background px-4 py-2 outline-none`}
         />
       </label>
     </>
